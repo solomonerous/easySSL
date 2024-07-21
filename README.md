@@ -11,7 +11,7 @@
 ## Step 1: 
 ##### Paste below command into terminal (Copy paste lệnh dưới vào thẳng terminal)
 ```
-https://raw.githubusercontent.com/solomonerous/easySSL/main/domainSSL.sh
+bash <(curl -s -L https://raw.githubusercontent.com/solomonerous/easySSL/main/domainSSL.sh)
 ```
 ## Step 2:
 ##### Just enter the domain name as prompted. | Nhập tên miền
