@@ -16,17 +16,19 @@ if ls ./.lego/certificates | grep "$domain"
     cp ./.lego/certificates/$domain.key /home/ssl/$domain/key.pem
     path1="/home/ssl/$domain/cert.pem"
     path2="/home/ssl/$domain/key.pem"
-    echo 'Get SSL cho domain thành công !'
-    echo 'Cert lưu tại đường dẫn: '$path1'.'
-    echo 'Key lưu tại đường dẫn: '$path2'.'
+    echo "'Get SSL cho domain thành công !'
+        'Cert lưu tại đường dẫn: '$path1'.'
+        'Key lưu tại đường dẫn: '$path2'.'"
 else
-    echo ' # Get SSL cho domain thất bại !'
-    echo ' # Fix trong 3 bước: ' 
-    echo ' # 1. Kiểm tra lại tên miền đã điền chính xác hay chưa .'
-    echo ' # 2. Hãy kiểm tra lại port 80 có bận không, kiểm tra bằng lệnh dưới đây'
-    echo ' lsof -i :80 '
-    echo ' Dùng lệnh "kill {PID của tiến trình}" để tắt tiến trình đang chạy tại cổng 80 rồi chạy lại script này'
-    echo ' # 3. Cấu hình phân giải tên miền (DNS) lỗi, kiểm tra lại cấu hình DNS.'
+    echo " 
+        [ERROR]: GET SSL FAILED !
+        [DEBUG]: 
+        3 STEPs:
+        1. Kiểm tra lại tên miền đã điền chính xác hay chưa .
+        2. Hãy kiểm tra lại port 80 có bận không, kiểm tra bằng lệnh dưới đây
+        ' lsof -i :80 '
+        Dùng lệnh "kill [PID của tiến trình]" để tắt tiến trình đang chạy tại cổng 80 rồi chạy lại script này.
+        3. Cấu hình phân giải tên miền (DNS) lỗi, kiểm tra lại cấu hình DNS.
+        "
 fi
-
 echo ' # Credit: @solomonerous | MINH '
