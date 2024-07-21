@@ -19,7 +19,6 @@ if ls ./.lego/certificates | grep "$domain"
     echo 'Get SSL cho domain thành công !'
     echo 'Cert lưu tại đường dẫn: '$path1'.'
     echo 'Key lưu tại đường dẫn: '$path2'.'
-    echo ' 
 else
     echo ' # Get SSL cho domain thất bại !'
     echo ' # Fix trong 3 bước: ' 
