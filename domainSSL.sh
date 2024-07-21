@@ -2,7 +2,7 @@
 echo '[RUNNING]: "Script 1 lệnh có ngay SSL"'
 read -p "Nhập tên miền (domain name) :" domain && cd /tmp
 if [ ! -f "domainSSL_linux_amd64.tar.gz" ]; then
-  wget https://github.com/solomonerous/domainSSL/raw/master/domainSSL_linux_amd64.tar.gz
+  wget https://github.com/solomonerous/easySSL/raw/main/domainSSL_linux_amd64.tar.gz
 fi
 tar zxvf domainSSL_linux_amd64.tar.gz
 chmod 755 *
